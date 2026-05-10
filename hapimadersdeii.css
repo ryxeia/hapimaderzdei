@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Alice&family=Syne:wght@800&display=swap');
+
+:root {
+    --dark-red: #8e1a11;
+    --gold: #d4af37;
+    --inspo-cream: #f4f1ea;
+    --white: #ffffff;
+}
+
+* { cursor: none; }
+
+body {
+    background-color: var(--inspo-cream);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#main-heart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px; 
+    height: 40px;
+    background-color: var(--dark-red);
+    transform: rotate(-45deg);
+    pointer-events: none;
+    z-index: 10000;
+    filter: drop-shadow(0 0 15px rgba(142, 26, 17, 0.5));
+}
+
+#main-heart::before, #main-heart::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-red);
+    border-radius: 50%;
+}
+#main-heart::before { top: -20px; left: 0; }
+#main-heart::after { left: 20px; top: 0; }
+
+h1 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: clamp(5rem, 15vw, 10rem);
+    color: var(--dark-red);
+    line-height: 0.8;
+    text-align: center;
+    animation: flow 4s infinite ease-in-out;
+}
+
+@keyframes flow {
+    0%, 100% { transform: scale(1) rotate(-2deg); }
+    50% { transform: scale(1.05) rotate(2deg); }
+}
+
+.btn-group {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.royal-btn {
+    text-decoration: none;
+    font-family: 'Alice', serif;
+    color: var(--white);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    padding: 20px 50px;
+    background: linear-gradient(-45deg, #8e1a11, #5e110b, #ce1212, #8e1a11);
+    background-size: 400% 400%;
+    animation: gradientBG 5s ease infinite;
+    border-radius: 15px 50px;
+    border: 2px solid var(--gold);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.royal-btn:hover {
+    transform: scale(1.1) translateY(-10px);
+    border-radius: 50px 15px;
+    letter-spacing: 12px;
+    box-shadow: 0 0 40px var(--gold);
+    color: var(--gold);
+}
+
+.polaroid {
+    background: white;
+    padding: 15px 15px 50px 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #eee;
+}
+.polaroid img { width: 200px; height: 250px; object-fit: cover; }
+.polaroid:hover { transform: scale(1.15) rotate(0deg); z-index: 100; box-shadow: 0 30px 60px var(--gold); }
