@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+    <html>
+        
+        <head>
+            <link rel="stylesheet" href="hapimadersdeii.css">
+            <style>
+                .letter-container {
+                    perspective: 1000px;
+                    padding: 40px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+        
+                .manuscript {
+                    background: linear-gradient(135deg, #ffffff 0%, #f9f7f2 100%);
+                    padding: 60px;
+                    max-width: 650px;
+                    border-radius: 2px;
+                    position: relative;
+                    box-shadow: 
+                        0 10px 30px rgba(0,0,0,0.05),
+                        0 1px 1px rgba(0,0,0,0.1);
+                    border-left: 5px solid var(--gold);
+                    animation: paperFloat 6s ease-in-out infinite;
+                    overflow: hidden;
+                }
+        
+                .manuscript::before {
+                    content: "";
+                    position: absolute;
+                    top: 0; left: 0; width: 100%; height: 100%;
+                    background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+                    opacity: 0.4;
+                    pointer-events: none;
+                }
+        
+                .letter-content {
+                    font-family: 'Alice', serif;
+                    color: #2c2c2c;
+                    line-height: 2;
+                    font-size: 1.2rem;
+                    text-align: justify;
+                    position: relative;
+                    z-index: 1;
+                }
+        
+                .letter-content p::first-letter {
+                    font-family: 'Pinyon Script', cursive;
+                    font-size: 3.5rem;
+                    color: var(--dark-red);
+                    float: left;
+                    line-height: 1;
+                    padding-right: 10px;
+                }
+        
+                .signature {
+                    font-family: 'Pinyon Script', cursive;
+                    font-size: 2.5rem;
+                    color: var(--dark-red);
+                    text-align: right;
+                    margin-top: 40px;
+                    display: block;
+                }
+        
+                @keyframes paperFloat {
+                    0%, 100% { transform: translateY(0) rotateX(2deg); }
+                    50% { transform: translateY(-15px) rotateX(-1deg); }
+                }
+        
+                .divider {
+                    width: 80px;
+                    height: 2px;
+                    background: var(--gold);
+                    margin: 30px auto;
+                    opacity: 0.5;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <div id="main-heart"></div>
+        
+            <div class="letter-container">
+                <h1 style="margin-bottom: 40px;">Ink of <br> <span style="font-size: 0.6em; letter-spacing: 15px; opacity: 0.8;">Gratitude</span></h1>
+                
+                <div class="manuscript">
+                    <div class="letter-content">
+                        <p>
+                           Dearest Mama, I used all my knowledge sa ICT class ko for this card as a tribute sa endless patience and love mo sa'kin. Saksi ka sa bawat gabing nagpupuyat ako para sa codes & everything. You are always there to remind me na bilisan ko na (😂) para makapagpahinga na ko't matulog. Sorry if napapadalas ang tigas ng ulo ko't napapadalas ang puyat ko kahit walang paperworks hehe (😁✌️). ANW, thank you so much sa inyo ni Papa for always reminding me na mas mahalaga ang kalusugan ko't sarili ko kaysa sa ibang bagay. Thank you for prioritizing my well-being over my achievements. Thank you for making me feel that I am enough, regardless of the numbers on my report card.  
+                        </p>
+                        
+                        <div class="divider"></div>
+                        
+                        <p>
+                            ALSOOO FYI, u are my role model & nilolook up ko sa buong universe. You showed me how incredible you are—as a Daughter, a Wife, a Sister, a Friend, and of course, as my Mother. You are my definition of a real multitasker (kasi you can handle EVERYTHING! 💞). Kayo ni Papa ang reason kung bakit mas pinili kong pagbutihin yung STE journey ko noong g8 kaysa magpatuloy as a regular. Pangarap ko kasing matuto under this program and use all of that knowledge and of course dedication to take you and Papa sa Europe kasi yun naman ang pangarap mo. I made this card nang patago to surprise tyou 2day (pero kagabi lang ginawa 😂). No words can express how I love you. I love you to the moon & back, Mama! 💝
+                        </p>
+                        
+                        <span class="signature">Written with love, Your Fav. Daughter.</span>
+                    </div>
+                </div>
+        
+                <div class="btn-group">
+                    <a href="hapimadersdei.html" class="royal-btn">Home</a>
+                </div>
+            </div>
+        
+            <script src="magic.js"></script>
+    </body>
+</html>
